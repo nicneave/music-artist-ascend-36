@@ -1,44 +1,54 @@
 import { Button } from "@/components/ui/button";
-import { Home, Globe, Music, ShoppingBag, Camera, Search, CheckCircle } from "lucide-react";
+import { Home, FileText, Music, Video, Camera, Users, Mail, CheckCircle } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 
-const ArtistWebsite = () => {
+const ArtistEPK = () => {
   const navigate = useNavigate();
 
   const features = [
     {
-      icon: <Music className="w-8 h-8 text-primary" />,
-      title: "Custom Bio Page",
-      description: "We'll feature your story in a clean, compelling layout that fans and industry pros can connect with."
+      icon: <FileText className="w-8 h-8 text-primary" />,
+      title: "Artist Bio",
+      description: "A short and long version written to highlight your story, style, and achievements — tailored for press, venues, and industry professionals."
     },
     {
       icon: <Music className="w-8 h-8 text-primary" />,
-      title: "Music Showcase",
-      description: "Embed your latest singles, projects, and music videos directly on the site — Spotify, Apple Music, YouTube, SoundCloud, you name it."
+      title: "Music Section",
+      description: "Streamable embeds or links to your latest tracks, albums, and unreleased previews (optional)."
     },
     {
-      icon: <ShoppingBag className="w-8 h-8 text-primary" />,
-      title: "Merch Store Integration",
-      description: "Already selling merch? We'll connect your existing Shopify, Printful, or Bandcamp store. Need help getting started? We can help with that too."
+      icon: <Video className="w-8 h-8 text-primary" />,
+      title: "Live Performance Footage or Videos",
+      description: "Add music videos, concert footage, or behind-the-scenes clips that show who you are as a performer and creator."
+    },
+    {
+      icon: <FileText className="w-8 h-8 text-primary" />,
+      title: "Press & Quotes",
+      description: "Got any blog writeups, reviews, or testimonials? We'll feature them front and center to build trust."
     },
     {
       icon: <Camera className="w-8 h-8 text-primary" />,
-      title: "Visual Identity",
-      description: "High-quality photos are essential. We'll work with your existing images or help recreate stunning visuals to match your brand."
+      title: "Photos",
+      description: "High-res press shots and performance images ready for blogs, posters, or press coverage."
     },
     {
-      icon: <Search className="w-8 h-8 text-primary" />,
-      title: "SEO Optimized",
-      description: "Your name should show up on Google — not get buried under social links. We'll optimize your site to boost your search engine visibility so fans, venues, blogs, and industry pros can find you fast."
+      icon: <Mail className="w-8 h-8 text-primary" />,
+      title: "Contact & Social Links",
+      description: "Easy access for promoters, labels, and blogs to get in touch or explore more about you."
+    },
+    {
+      icon: <FileText className="w-8 h-8 text-primary" />,
+      title: "Custom Design (PDF or Web-Based)",
+      description: "Professionally designed and exportable — ready to send via email or showcase on your website."
     }
   ];
 
   const benefits = [
-    "Professional Credibility – Stand out from the sea of social media profiles. A polished site makes you look serious about your craft.",
-    "Full Control – No algorithms. No distractions. Just your music, your merch, and your brand — exactly how you want it.",
-    "Fan Funnel Hub – Collect emails, sell tickets, promote drops, and capture direct fan data all from one central place.",
-    "Better Branding – Your visuals, your message, your tone — fully customized to match your aesthetic.",
-    "Long-Term Footprint – Plant your digital flag on Google and build authority over time. Every search result, every backlink, every fan interaction counts."
+    "Book More Shows – Venues and booking agents expect to see an EPK. Without one, you're missing gigs.",
+    "Media Ready – Bloggers, playlist curators, and journalists need fast access to your info and photos.",
+    "Instant Credibility – A sleek, professional EPK makes you look legit — even if you're just starting out.",
+    "Time Saver – No more sending 10 links and files separately. One clean package does it all.",
+    "Built for Conversion – Designed to get you booked, covered, and discovered."
   ];
 
   return (
@@ -63,19 +73,25 @@ const ArtistWebsite = () => {
       <div className="bg-gradient-to-br from-primary/20 via-primary/10 to-background py-20 px-4 text-center">
         <div className="max-w-4xl mx-auto">
           <div className="mb-6">
-            <Globe className="w-16 h-16 mx-auto text-primary mb-4" />
+            <FileText className="w-16 h-16 mx-auto text-primary mb-4" />
           </div>
           <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-primary via-primary to-primary/70 bg-clip-text text-transparent">
-            🎤 Artist Website Build
+            🎬 Artist EPK
           </h1>
+          <p className="text-lg md:text-xl text-muted-foreground mb-4">
+            (Electronic Press Kit)
+          </p>
           <p className="text-xl md:text-2xl text-muted-foreground mb-6 max-w-3xl mx-auto leading-relaxed">
-            Your Digital Homebase — Built to Convert
+            Your Artist Resume — Built to Impress
           </p>
           <div className="bg-primary/20 border border-primary/30 rounded-xl p-6 mb-8 max-w-md mx-auto">
-            <p className="text-2xl font-bold text-primary">🌐 Starting at: $197</p>
+            <p className="text-2xl font-bold text-primary">📦 One-Time Setup: $97</p>
           </div>
           <p className="text-lg text-muted-foreground max-w-4xl mx-auto leading-relaxed">
-            We build modern, professional websites designed specifically for music artists. Whether you're just starting out or leveling up your career, having your own website is one of the most powerful tools for growing your brand, building your fanbase, and generating revenue.
+            A well-designed EPK (Electronic Press Kit) is a must-have for every serious music artist. It's your all-in-one resume — used to pitch yourself to venues, labels, blogs, playlists, radio stations, and brand partners.
+          </p>
+          <p className="text-lg text-muted-foreground max-w-4xl mx-auto leading-relaxed mt-4">
+            Whether you're applying to festivals, booking shows, or trying to get media coverage, an EPK gives you instant credibility and makes it easy for people to say yes.
           </p>
         </div>
       </div>
@@ -100,11 +116,11 @@ const ArtistWebsite = () => {
         </div>
       </div>
 
-      {/* Why Every Artist Needs a Website Section */}
+      {/* Why You Need an EPK Section */}
       <div className="py-16 px-4 bg-muted/20">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-4xl font-bold text-center mb-12">
-            Why Every Artist Needs a Website:
+            Why You Need an EPK:
           </h2>
           <div className="space-y-6">
             {benefits.map((benefit, index) => (
@@ -120,9 +136,9 @@ const ArtistWebsite = () => {
       {/* CTA Section */}
       <div className="py-16 px-4 text-center">
         <div className="max-w-2xl mx-auto">
-          <h2 className="text-3xl font-bold mb-6">Ready to Build Your Digital Homebase?</h2>
+          <h2 className="text-3xl font-bold mb-6">Ready to Build Your Professional EPK?</h2>
           <p className="text-lg text-muted-foreground mb-8">
-            Let's create a professional website that converts visitors into fans and grows your music career.
+            Get the industry-standard press kit that opens doors and gets you noticed.
           </p>
           <Button 
             onClick={() => {
@@ -132,7 +148,7 @@ const ArtistWebsite = () => {
             size="lg" 
             className="gap-2 px-8 py-6 text-lg"
           >
-            <Globe className="w-5 h-5" />
+            <FileText className="w-5 h-5" />
             View Our Packages
           </Button>
         </div>
@@ -141,4 +157,4 @@ const ArtistWebsite = () => {
   );
 };
 
-export default ArtistWebsite;
+export default ArtistEPK;

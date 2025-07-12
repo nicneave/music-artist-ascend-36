@@ -10,6 +10,7 @@ import ShopifySetup from "./pages/ShopifySetup";
 import NewsletterGuide from "./pages/NewsletterGuide";
 import ArtistBlueprint from "./pages/ArtistBlueprint";
 import ArtistWebsite from "./pages/ArtistWebsite";
+import ArtistEPK from "./pages/ArtistEPK";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -27,6 +28,7 @@ const App = () => (
           <Route path="/newsletter-guide" element={<NewsletterGuide />} />
           <Route path="/artist-blueprint" element={<ArtistBlueprint />} />
           <Route path="/artist-website" element={<ArtistWebsite />} />
+          <Route path="/artist-epk" element={<ArtistEPK />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
