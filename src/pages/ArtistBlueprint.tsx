@@ -399,7 +399,7 @@ const ArtistBlueprint = () => {
             <div className="space-y-4">
               <Button 
                 onClick={handleGetStarted}
-                className="text-lg px-8 py-6 h-auto bg-white text-primary hover:bg-white/90"
+                className="text-lg px-8 py-6 h-auto bg-primary text-white hover:bg-primary/90"
               >
                 View Our Packages
               </Button>
@@ -424,7 +424,7 @@ const ArtistBlueprint = () => {
               placeholder="Enter your email address"
               className="flex-1 px-4 py-3 rounded-md border border-input bg-background text-foreground"
             />
-            <Button className="px-8 py-3 bg-white text-primary hover:bg-white/90">
+            <Button className="px-8 py-3 bg-primary text-white hover:bg-primary/90">
               Download PDF
             </Button>
           </div>

@@ -297,7 +297,7 @@ const ShopifySetup = () => {
             <Button 
               onClick={() => {/* External link will be added later */}}
               size="lg" 
-              className="gap-2 px-8 py-6 text-lg bg-white text-primary hover:bg-white/90"
+              className="gap-2 px-8 py-6 text-lg bg-primary text-white hover:bg-primary/90"
             >
               <ShoppingBag className="w-5 h-5" />
               Get Started - $750
