@@ -44,15 +44,11 @@ const ArtistWebsite = () => {
   return (
     <div className="min-h-screen bg-background">
       {/* Home Button */}
-      <div className="absolute top-4 left-4 z-10">
-        <Button
-          onClick={() => {
-            navigate("/");
-            window.scrollTo(0, 0);
-          }}
-          variant="outline"
-          size="sm"
-          className="gap-2"
+      <div className="absolute top-6 left-6 z-10">
+        <Button 
+          onClick={() => navigate("/")}
+          variant="ghost"
+          className="gap-2 text-white hover:bg-white/20"
         >
           <Home className="w-4 h-4" />
           Home
@@ -60,21 +56,22 @@ const ArtistWebsite = () => {
       </div>
 
       {/* Hero Section */}
-      <div className="bg-gradient-to-br from-primary/20 via-primary/10 to-background py-20 px-4 text-center">
-        <div className="max-w-4xl mx-auto">
+      <div className="relative bg-gradient-to-br from-primary via-primary/80 to-secondary overflow-hidden">
+        <div className="absolute inset-0 bg-black/20"></div>
+        <div className="relative max-w-4xl mx-auto px-6 py-20 text-center text-white">
           <div className="mb-6">
-            <Globe className="w-16 h-16 mx-auto text-primary mb-4" />
+            <Globe className="w-16 h-16 mx-auto text-white mb-4" />
           </div>
-          <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-primary via-primary to-primary/70 bg-clip-text text-transparent">
+          <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">
             🎤 Artist Website Build
           </h1>
-          <p className="text-xl md:text-2xl text-muted-foreground mb-6 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-xl md:text-2xl opacity-90 mb-6 max-w-3xl mx-auto leading-relaxed">
             Your Digital Homebase — Built to Convert
           </p>
-          <div className="bg-primary/20 border border-primary/30 rounded-xl p-6 mb-8 max-w-md mx-auto">
-            <p className="text-2xl font-bold text-primary">🌐 Starting at: $197</p>
+          <div className="bg-white/20 border border-white/30 rounded-xl p-6 mb-8 max-w-md mx-auto">
+            <p className="text-2xl font-bold text-white">🌐 Starting at: $197</p>
           </div>
-          <p className="text-lg text-muted-foreground max-w-4xl mx-auto leading-relaxed">
+          <p className="text-lg opacity-90 max-w-4xl mx-auto leading-relaxed">
             We build modern, professional websites designed specifically for music artists. Whether you're just starting out or leveling up your career, having your own website is one of the most powerful tools for growing your brand, building your fanbase, and generating revenue.
           </p>
         </div>
