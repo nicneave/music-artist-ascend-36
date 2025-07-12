@@ -317,7 +317,7 @@ const NewsletterGuide = () => {
 
             <Button 
               onClick={handleGetStarted}
-              className="text-lg px-8 py-6 h-auto bg-gradient-to-r from-primary to-secondary hover:from-primary/90 hover:to-secondary/90"
+              className="text-lg px-8 py-6 h-auto bg-white text-primary hover:bg-white/90"
             >
               Get Started - $149 Setup
             </Button>

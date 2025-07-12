@@ -294,14 +294,14 @@ const ShopifySetup = () => {
                 <div className="text-4xl font-bold text-primary mb-2">$750</div>
                 <p className="text-muted-foreground">Complete Shopify setup & optimization</p>
               </div>
-              <Button 
-                onClick={() => {/* External link will be added later */}}
-                size="lg" 
-                className="gap-2 px-8 py-6 text-lg bg-gradient-to-r from-primary to-secondary hover:from-primary/90 hover:to-secondary/90"
-              >
-                <ShoppingBag className="w-5 h-5" />
-                Get Started - $750
-              </Button>
+            <Button 
+              onClick={() => {/* External link will be added later */}}
+              size="lg" 
+              className="gap-2 px-8 py-6 text-lg bg-white text-primary hover:bg-white/90"
+            >
+              <ShoppingBag className="w-5 h-5" />
+              Get Started - $750
+            </Button>
               <p className="text-sm text-muted-foreground mt-4">
                 Start selling your merch professionally today
               </p>
