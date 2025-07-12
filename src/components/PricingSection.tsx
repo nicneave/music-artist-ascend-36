@@ -175,8 +175,13 @@ const PricingSection = () => {
                   <h4 className="font-semibold text-foreground mb-2">{addon.name}</h4>
                   <p className="text-xl font-bold bg-gradient-to-r from-primary to-primary/70 bg-clip-text text-transparent mb-3">{addon.price}</p>
                   <p className="text-muted-foreground text-sm mb-4">{addon.description}</p>
-                  <div className="text-sm font-medium text-primary group-hover:text-primary/80 transition-colors">
-                    Click here to learn more →
+                  <div className="mt-4 pt-4 border-t border-border/50">
+                    <div className="inline-flex items-center gap-2 bg-primary/10 hover:bg-primary/20 px-4 py-2 rounded-lg text-sm font-medium text-primary transition-all duration-200 group-hover:scale-105">
+                      Learn More
+                      <svg className="w-4 h-4 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                      </svg>
+                    </div>
                   </div>
                 </div>
               ))}
