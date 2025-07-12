@@ -55,35 +55,35 @@ const PricingSection = () => {
       name: "Shopify Setup", 
       price: "Free Guide", 
       description: "Complete setup guide for your online store",
-      icon: <ShoppingBag className="w-6 h-6 text-blue-600" />,
+      icon: <ShoppingBag className="w-6 h-6 text-primary" />,
       route: "/shopify-setup"
     },
     { 
       name: "Newsletter Guide", 
       price: "Free Guide", 
       description: "Build your fan funnel with email marketing",
-      icon: <Mail className="w-6 h-6 text-green-600" />,
+      icon: <Mail className="w-6 h-6 text-primary" />,
       route: "/newsletter-guide"
     },
     { 
       name: "Artist Blueprint", 
       price: "Free Guide", 
       description: "Zero to 1000 true fans strategy guide",
-      icon: <StarIcon className="w-6 h-6 text-amber-600" />,
+      icon: <StarIcon className="w-6 h-6 text-primary" />,
       route: "/artist-blueprint"
     },
     { 
       name: "Artist Website", 
       price: "$197", 
       description: "Professional site to showcase music and sell merch",
-      icon: <Globe className="w-6 h-6 text-cyan-600" />,
+      icon: <Globe className="w-6 h-6 text-primary" />,
       route: "/artist-website"
     },
     { 
       name: "Artist EPK", 
       price: "$97", 
       description: "Electronic Press Kit for industry professionals",
-      icon: <FileText className="w-6 h-6 text-purple-600" />,
+      icon: <FileText className="w-6 h-6 text-primary" />,
       route: "/artist-epk"
     }
   ];
@@ -151,9 +151,9 @@ const PricingSection = () => {
         </div>
 
         {/* Add-Ons Section */}
-        <div className="bg-gradient-to-r from-slate-50 to-gray-50 dark:from-slate-900 dark:to-gray-900 rounded-2xl p-8 mb-16 animate-fade-in">
+        <div className="bg-gradient-to-r from-primary/10 to-primary/5 rounded-2xl p-8 mb-16 animate-fade-in">
           <h3 className="text-3xl font-bold text-center mb-8">
-            <span className="bg-gradient-to-r from-gray-800 to-gray-600 dark:from-gray-200 dark:to-gray-400 bg-clip-text text-transparent">🧩 Easy Add-Ons & Resources</span>
+            <span className="bg-gradient-to-r from-primary to-primary/70 bg-clip-text text-transparent">🧩 Easy Add-Ons & Resources</span>
           </h3>
           <p className="text-center text-muted-foreground mb-8 max-w-2xl mx-auto">
             Enhance your music career with these additional resources and services
@@ -164,7 +164,7 @@ const PricingSection = () => {
               {addOns.map((addon, index) => (
                 <div 
                   key={index} 
-                  className="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-xl p-6 hover:border-gray-300 dark:hover:border-gray-600 transition-all duration-300 hover:shadow-lg text-center animate-scale-in hover:scale-105 cursor-pointer group"
+                  className="bg-card/80 backdrop-blur-sm border border-border rounded-xl p-6 hover:border-primary/50 transition-all duration-300 hover:shadow-xl hover:shadow-primary/10 text-center animate-scale-in hover:scale-105 cursor-pointer group"
                   style={{ animationDelay: `${index * 0.1}s` }}
                   onClick={() => {
                     navigate(addon.route);
@@ -173,9 +173,9 @@ const PricingSection = () => {
                 >
                   <div className="mb-4 flex justify-center">{addon.icon}</div>
                   <h4 className="font-semibold text-foreground mb-2">{addon.name}</h4>
-                  <p className="text-xl font-bold text-gray-800 dark:text-gray-200 mb-3">{addon.price}</p>
+                  <p className="text-xl font-bold bg-gradient-to-r from-primary to-primary/70 bg-clip-text text-transparent mb-3">{addon.price}</p>
                   <p className="text-muted-foreground text-sm mb-4">{addon.description}</p>
-                  <div className="text-sm font-medium text-blue-600 dark:text-blue-400 group-hover:text-blue-700 dark:group-hover:text-blue-300 transition-colors">
+                  <div className="text-sm font-medium text-primary group-hover:text-primary/80 transition-colors">
                     Click here to learn more →
                   </div>
                 </div>
