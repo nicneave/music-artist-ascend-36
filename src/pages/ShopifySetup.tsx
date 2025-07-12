@@ -21,7 +21,10 @@ const ShopifySetup = () => {
       {/* Home Button */}
       <div className="absolute top-6 left-6 z-10">
         <Button 
-          onClick={() => navigate("/")}
+          onClick={() => {
+            navigate("/");
+            window.scrollTo(0, 0);
+          }}
           variant="ghost"
           className="gap-2 text-white hover:bg-white/20"
         >
