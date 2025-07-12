@@ -164,23 +164,25 @@ const PricingSection = () => {
               {addOns.map((addon, index) => (
                 <div 
                   key={index} 
-                  className="bg-card/80 backdrop-blur-sm border border-border rounded-xl p-6 hover:border-primary/50 transition-all duration-300 hover:shadow-xl hover:shadow-primary/10 text-center animate-scale-in hover:scale-105 cursor-pointer group"
+                  className="bg-card/80 backdrop-blur-sm border border-border rounded-xl p-6 hover:border-primary/50 transition-all duration-300 hover:shadow-xl hover:shadow-primary/10 text-center animate-scale-in hover:scale-105 cursor-pointer group flex flex-col h-full"
                   style={{ animationDelay: `${index * 0.1}s` }}
                   onClick={() => {
                     navigate(addon.route);
                     window.scrollTo(0, 0);
                   }}
                 >
-                  <div className="mb-4 flex justify-center">{addon.icon}</div>
-                  <h4 className="font-semibold text-foreground mb-2">{addon.name}</h4>
-                  <p className="text-xl font-bold bg-gradient-to-r from-primary to-primary/70 bg-clip-text text-transparent mb-3">{addon.price}</p>
-                  <p className="text-muted-foreground text-sm mb-4">{addon.description}</p>
-                  <div className="mt-4 pt-4 border-t border-border/50">
-                    <div className="inline-flex items-center gap-2 bg-primary/10 hover:bg-primary/20 px-4 py-2 rounded-lg text-sm font-medium text-primary transition-all duration-200 group-hover:scale-105">
-                      Learn More
-                      <svg className="w-4 h-4 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                      </svg>
+                  <div className="flex flex-col h-full">
+                    <div className="mb-4 flex justify-center">{addon.icon}</div>
+                    <h4 className="font-semibold text-foreground mb-2">{addon.name}</h4>
+                    <p className="text-xl font-bold bg-gradient-to-r from-primary to-primary/70 bg-clip-text text-transparent mb-3">{addon.price}</p>
+                    <p className="text-muted-foreground text-sm mb-4 flex-grow">{addon.description}</p>
+                    <div className="mt-auto pt-4 border-t border-border/50">
+                      <div className="inline-flex items-center gap-2 bg-primary/10 hover:bg-primary/20 px-4 py-2 rounded-lg text-sm font-medium text-primary transition-all duration-200 group-hover:scale-105">
+                        Learn More
+                        <svg className="w-4 h-4 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                        </svg>
+                      </div>
                     </div>
                   </div>
                 </div>
