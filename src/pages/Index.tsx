@@ -1,6 +1,6 @@
 
 import { Button } from "@/components/ui/button";
-import { Lock, ShoppingBag, Mail, Star } from "lucide-react";
+import { Lock, ShoppingBag, Mail, Star, Globe } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import HeroSection from "@/components/HeroSection";
 import ServicesSection from "@/components/ServicesSection";
@@ -25,7 +25,7 @@ const Index = () => {
       <div className="py-12 px-4 text-center bg-muted/20">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-3xl font-bold mb-8">Other Resources</h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 justify-center items-center mb-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 justify-center items-center mb-8">
             <Button 
               onClick={() => {
                 navigate("/shopify-setup");
@@ -58,6 +58,17 @@ const Index = () => {
             >
               <Star className="w-4 h-4" />
               Artist Blueprint
+            </Button>
+            <Button 
+              onClick={() => {
+                navigate("/artist-website");
+                window.scrollTo(0, 0);
+              }}
+              variant="secondary"
+              className="gap-2 w-full"
+            >
+              <Globe className="w-4 h-4" />
+              Artist Website
             </Button>
           </div>
           
