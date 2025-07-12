@@ -21,6 +21,55 @@ const Index = () => {
       <PricingSection />
       <ContactSection />
       
+      {/* Quick Access Buttons */}
+      <div className="py-16 px-4 text-center">
+        <div className="max-w-4xl mx-auto">
+          <h3 className="text-2xl font-semibold mb-8">Quick Access</h3>
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
+            <Button 
+              onClick={() => navigate("/shopify-setup")}
+              variant="outline"
+              className="gap-2 hover:bg-primary hover:text-primary-foreground transition-colors"
+            >
+              <ShoppingBag className="w-4 h-4" />
+              Shopify Setup
+            </Button>
+            <Button 
+              onClick={() => navigate("/newsletter-guide")}
+              variant="outline"
+              className="gap-2 hover:bg-primary hover:text-primary-foreground transition-colors"
+            >
+              <Mail className="w-4 h-4" />
+              Newsletter Guide
+            </Button>
+            <Button 
+              onClick={() => navigate("/artist-blueprint")}
+              variant="outline"
+              className="gap-2 hover:bg-primary hover:text-primary-foreground transition-colors"
+            >
+              <Star className="w-4 h-4" />
+              Artist Blueprint
+            </Button>
+            <Button 
+              onClick={() => navigate("/artist-website")}
+              variant="outline"
+              className="gap-2 hover:bg-primary hover:text-primary-foreground transition-colors"
+            >
+              <Globe className="w-4 h-4" />
+              Artist Website
+            </Button>
+            <Button 
+              onClick={() => navigate("/artist-epk")}
+              variant="outline"
+              className="gap-2 hover:bg-primary hover:text-primary-foreground transition-colors"
+            >
+              <FileText className="w-4 h-4" />
+              Artist EPK
+            </Button>
+          </div>
+        </div>
+      </div>
+      
       {/* Exclusive Access Section */}
       <div className="py-12 px-4 text-center bg-muted/20">
         <div className="max-w-2xl mx-auto">
