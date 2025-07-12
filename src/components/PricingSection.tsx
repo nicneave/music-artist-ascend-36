@@ -117,25 +117,6 @@ const PricingSection = () => {
           ))}
         </div>
 
-        {/* Add-Ons Section */}
-        <div className="bg-gradient-to-r from-primary/10 to-primary/5 rounded-2xl p-8 mb-16 animate-fade-in">
-          <h3 className="text-3xl font-bold text-center mb-8">
-            <span className="bg-gradient-to-r from-primary to-primary/70 bg-clip-text text-transparent">🧩 Easy Add-Ons & Upsells</span>
-          </h3>
-          <p className="text-center text-muted-foreground mb-8">
-            Enhance your campaign with these proven add-on services
-          </p>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {addOns.map((addon, index) => (
-              <div key={index} className="bg-card/80 backdrop-blur-sm border border-border rounded-xl p-6 hover:border-primary/50 transition-all duration-300 hover:shadow-xl hover:shadow-primary/10 text-center animate-scale-in hover:scale-105" style={{ animationDelay: `${index * 0.1}s` }}>
-                <h4 className="font-semibold text-foreground mb-2">{addon.name}</h4>
-                <p className="text-2xl font-bold bg-gradient-to-r from-primary to-primary/70 bg-clip-text text-transparent mb-3">{addon.price}</p>
-                <p className="text-muted-foreground text-sm">{addon.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
 
         {/* Retainer Section */}
         <div className="text-center bg-gradient-to-r from-primary/20 to-primary/10 rounded-xl p-8 border border-border animate-scale-in">

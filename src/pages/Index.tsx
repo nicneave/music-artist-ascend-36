@@ -31,7 +31,7 @@ const Index = () => {
                 navigate("/shopify-setup");
                 window.scrollTo(0, 0);
               }}
-              variant="default"
+              variant="secondary"
               className="gap-2 w-full"
             >
               <ShoppingBag className="w-4 h-4" />
