@@ -21,69 +21,9 @@ const Index = () => {
       <PricingSection />
       <ContactSection />
       
-      {/* Other Resources Section */}
+      {/* Exclusive Access Section */}
       <div className="py-12 px-4 text-center bg-muted/20">
-        <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl font-bold mb-8">Other Resources</h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4 justify-center items-center mb-8">
-            <Button 
-              onClick={() => {
-                navigate("/shopify-setup");
-                window.scrollTo(0, 0);
-              }}
-              variant="secondary"
-              className="gap-2 w-full"
-            >
-              <ShoppingBag className="w-4 h-4" />
-              Shopify Setup
-            </Button>
-            <Button 
-              onClick={() => {
-                navigate("/newsletter-guide");
-                window.scrollTo(0, 0);
-              }}
-              variant="secondary"
-              className="gap-2 w-full"
-            >
-              <Mail className="w-4 h-4" />
-              Newsletter Guide
-            </Button>
-            <Button 
-              onClick={() => {
-                navigate("/artist-blueprint");
-                window.scrollTo(0, 0);
-              }}
-              variant="secondary"
-              className="gap-2 w-full"
-            >
-              <Star className="w-4 h-4" />
-              Artist Blueprint
-            </Button>
-            <Button 
-              onClick={() => {
-                navigate("/artist-website");
-                window.scrollTo(0, 0);
-              }}
-              variant="secondary"
-              className="gap-2 w-full"
-            >
-              <Globe className="w-4 h-4" />
-              Artist Website
-            </Button>
-            <Button 
-              onClick={() => {
-                navigate("/artist-epk");
-                window.scrollTo(0, 0);
-              }}
-              variant="secondary"
-              className="gap-2 w-full"
-            >
-              <FileText className="w-4 h-4" />
-              Artist EPK
-            </Button>
-          </div>
-          
-          {/* Members Only Section */}
+        <div className="max-w-2xl mx-auto">
           <div className="border-t pt-8">
             <h3 className="text-xl font-semibold mb-4">Exclusive Access</h3>
             <Button 
