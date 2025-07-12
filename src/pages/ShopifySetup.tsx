@@ -9,7 +9,7 @@ import {
   Palette, 
   Package,
   Megaphone,
-  ArrowLeft
+  Home
 } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 
@@ -18,56 +18,60 @@ const ShopifySetup = () => {
 
   return (
     <div className="min-h-screen bg-background">
-      {/* Header */}
-      <div className="border-b">
-        <div className="container mx-auto px-4 py-4">
-          <Button 
-            variant="ghost" 
-            onClick={() => navigate("/")}
-            className="gap-2"
-          >
-            <ArrowLeft className="w-4 h-4" />
-            Back to Home
-          </Button>
-        </div>
+      {/* Home Button */}
+      <div className="absolute top-6 left-6 z-10">
+        <Button 
+          onClick={() => navigate("/")}
+          variant="ghost"
+          className="gap-2 text-white hover:bg-white/20"
+        >
+          <Home className="w-4 h-4" />
+          Home
+        </Button>
       </div>
 
       {/* Hero Section */}
-      <div className="container mx-auto px-4 py-12">
-        <div className="text-center max-w-4xl mx-auto">
-          <div className="flex items-center justify-center gap-2 mb-4">
-            <ShoppingBag className="w-8 h-8 text-primary" />
-            <h1 className="text-4xl font-bold">Shopify Merch Store Setup</h1>
-          </div>
+      <div className="relative bg-gradient-to-br from-primary via-primary/80 to-secondary overflow-hidden">
+        <div className="absolute inset-0 bg-black/20"></div>
+        <div className="relative z-10 container mx-auto px-4 py-20 text-center text-white">
+          <div className="max-w-4xl mx-auto">
+            <div className="flex items-center justify-center gap-2 mb-4">
+              <ShoppingBag className="w-12 h-12 text-white" />
+              <h1 className="text-5xl md:text-6xl font-bold">Shopify Merch Store Setup</h1>
+            </div>
+            
+            <Badge variant="secondary" className="mb-6 bg-white/20 text-white border-white/30">
+              Powered by Label Ready
+            </Badge>
           
-          <Badge variant="secondary" className="mb-6">
-            Powered by Label Ready
-          </Badge>
-          
-          <p className="text-xl text-muted-foreground mb-8">
-            Launch your merch line in days — not weeks.
-          </p>
-          
-          <p className="text-lg mb-8 max-w-3xl mx-auto">
-            We'll build your fully branded merch store using Shopify and Printful, upload your designs, 
-            and connect everything so you're ready to start selling immediately.
-          </p>
+            <p className="text-xl text-white/90 mb-8">
+              Launch your merch line in days — not weeks.
+            </p>
+            
+            <p className="text-lg mb-8 max-w-3xl mx-auto text-white/80">
+              We'll build your fully branded merch store using Shopify and Printful, upload your designs, 
+              and connect everything so you're ready to start selling immediately.
+            </p>
 
-          <div className="flex items-center justify-center gap-4 mb-12">
-            <div className="text-center">
-              <div className="text-3xl font-bold text-primary">$750</div>
-              <div className="text-sm text-muted-foreground">One-Time Setup</div>
-            </div>
-            <div className="text-center">
-              <div className="text-3xl font-bold text-primary">2-4</div>
-              <div className="text-sm text-muted-foreground">Business Days</div>
-            </div>
-            <div className="text-center">
-              <div className="text-3xl font-bold text-primary">5</div>
-              <div className="text-sm text-muted-foreground">Products Included</div>
+            <div className="flex items-center justify-center gap-8 mb-12">
+              <div className="text-center">
+                <div className="text-3xl font-bold text-white">$750</div>
+                <div className="text-sm text-white/70">One-Time Setup</div>
+              </div>
+              <div className="text-center">
+                <div className="text-3xl font-bold text-white">2-4</div>
+                <div className="text-sm text-white/70">Business Days</div>
+              </div>
+              <div className="text-center">
+                <div className="text-3xl font-bold text-white">5</div>
+                <div className="text-sm text-white/70">Products Included</div>
+              </div>
             </div>
           </div>
         </div>
+      </div>
+
+      <div className="container mx-auto px-4 py-12">
 
         {/* What's Included */}
         <div className="max-w-6xl mx-auto mb-12">

@@ -410,6 +410,29 @@ const ArtistBlueprint = () => {
           </CardContent>
         </Card>
       </div>
+
+      {/* Email Collection Section */}
+      <div className="py-16 px-4 bg-muted/20">
+        <div className="max-w-2xl mx-auto text-center">
+          <h3 className="text-3xl font-bold mb-4">Get the Complete PDF Guide</h3>
+          <p className="text-lg text-muted-foreground mb-8">
+            Enter your email to download the full "Zero to 100 True Fans" blueprint with worksheets, templates, and bonus resources.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
+            <input 
+              type="email" 
+              placeholder="Enter your email address"
+              className="flex-1 px-4 py-3 rounded-md border border-input bg-background text-foreground"
+            />
+            <Button className="px-8 py-3 bg-gradient-to-r from-primary to-secondary hover:from-primary/90 hover:to-secondary/90">
+              Download PDF
+            </Button>
+          </div>
+          <p className="text-xs text-muted-foreground mt-3">
+            We'll also send you our weekly artist tips and industry insights.
+          </p>
+        </div>
+      </div>
     </div>
   );
 };
