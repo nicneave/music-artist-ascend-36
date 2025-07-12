@@ -1,6 +1,6 @@
 
 import { Button } from "@/components/ui/button";
-import { Lock } from "lucide-react";
+import { Lock, ShoppingBag } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import HeroSection from "@/components/HeroSection";
 import ServicesSection from "@/components/ServicesSection";
@@ -21,16 +21,26 @@ const Index = () => {
       <PricingSection />
       <ContactSection />
       
-      {/* Members Only Button */}
+      {/* Navigation Buttons */}
       <div className="py-8 px-4 text-center bg-muted/20">
-        <Button 
-          onClick={handleMembersOnly}
-          variant="outline"
-          className="gap-2 hover:bg-primary hover:text-primary-foreground transition-colors"
-        >
-          <Lock className="w-4 h-4" />
-          Members Only
-        </Button>
+        <div className="flex flex-col sm:flex-row gap-4 justify-center items-center max-w-md mx-auto">
+          <Button 
+            onClick={() => navigate("/shopify-setup")}
+            variant="default"
+            className="gap-2 w-full sm:w-auto"
+          >
+            <ShoppingBag className="w-4 h-4" />
+            Shopify Setup
+          </Button>
+          <Button 
+            onClick={handleMembersOnly}
+            variant="outline"
+            className="gap-2 hover:bg-primary hover:text-primary-foreground transition-colors w-full sm:w-auto"
+          >
+            <Lock className="w-4 h-4" />
+            Members Only
+          </Button>
+        </div>
       </div>
     </div>
   );
