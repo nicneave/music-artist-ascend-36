@@ -9,6 +9,12 @@ const ArtistBlueprint = () => {
 
   const handleGetStarted = () => {
     navigate("/");
+    setTimeout(() => {
+      const pricingSection = document.getElementById('pricing-section');
+      if (pricingSection) {
+        pricingSection.scrollIntoView({ behavior: 'smooth' });
+      }
+    }, 100);
   };
 
   const monthlyGoals = [
