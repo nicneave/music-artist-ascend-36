@@ -26,16 +26,6 @@ const NewsletterGuide = () => {
         </Button>
       </div>
 
-      {/* Buy Button */}
-      <div className="absolute top-6 right-6 z-10">
-        <Button 
-          onClick={() => {/* External link will be added later */}}
-          className="gap-2 bg-white text-primary hover:bg-white/90"
-        >
-          <Mail className="w-4 h-4" />
-          Buy Now - $149
-        </Button>
-      </div>
       {/* Hero Section */}
       <div className="relative bg-gradient-to-br from-primary via-primary/80 to-secondary overflow-hidden">
         <div className="absolute inset-0 bg-black/20"></div>
@@ -46,9 +36,21 @@ const NewsletterGuide = () => {
           <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">
             The Independent Artist's Guide to Newsletters & Fan Funnels
           </h1>
-          <p className="text-xl md:text-2xl opacity-90 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-xl md:text-2xl opacity-90 max-w-3xl mx-auto leading-relaxed mb-8">
             Turn casual listeners into lifelong superfans with email and SMS marketing that actually works
           </p>
+          <Button 
+            onClick={() => {
+              document.getElementById('buy-now-section')?.scrollIntoView({ 
+                behavior: 'smooth' 
+              });
+            }}
+            size="lg"
+            className="gap-2 bg-white text-primary hover:bg-white/90 px-8 py-6 text-lg"
+          >
+            <Mail className="w-5 h-5" />
+            Buy Now - $149
+          </Button>
         </div>
       </div>
 
@@ -267,7 +269,7 @@ const NewsletterGuide = () => {
         </div>
 
         {/* Pricing Section */}
-        <Card className="bg-gradient-to-br from-primary/5 to-secondary/5 border-2 border-primary/20">
+        <Card id="buy-now-section" className="bg-gradient-to-br from-primary/5 to-secondary/5 border-2 border-primary/20">
           <CardHeader className="text-center">
             <CardTitle className="flex items-center justify-center gap-3 text-2xl">
               <DollarSign className="w-6 h-6 text-primary" />

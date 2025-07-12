@@ -65,16 +65,6 @@ const ArtistEPK = () => {
         </Button>
       </div>
 
-      {/* Buy Button */}
-      <div className="absolute top-6 right-6 z-10">
-        <Button 
-          onClick={() => {/* External link will be added later */}}
-          className="gap-2 bg-white text-primary hover:bg-white/90"
-        >
-          <FileText className="w-4 h-4" />
-          Buy Now - $97
-        </Button>
-      </div>
 
       {/* Hero Section */}
       <div className="relative bg-gradient-to-br from-primary via-primary/80 to-secondary overflow-hidden">
@@ -98,9 +88,21 @@ const ArtistEPK = () => {
           <p className="text-lg opacity-90 max-w-4xl mx-auto leading-relaxed mb-4">
             A well-designed EPK (Electronic Press Kit) is a must-have for every serious music artist. It's your all-in-one resume — used to pitch yourself to venues, labels, blogs, playlists, radio stations, and brand partners.
           </p>
-          <p className="text-lg opacity-90 max-w-4xl mx-auto leading-relaxed">
+          <p className="text-lg opacity-90 max-w-4xl mx-auto leading-relaxed mb-8">
             Whether you're applying to festivals, booking shows, or trying to get media coverage, an EPK gives you instant credibility and makes it easy for people to say yes.
           </p>
+          <Button 
+            onClick={() => {
+              document.getElementById('buy-now-section')?.scrollIntoView({ 
+                behavior: 'smooth' 
+              });
+            }}
+            size="lg"
+            className="gap-2 bg-white text-primary hover:bg-white/90 px-8 py-6 text-lg"
+          >
+            <FileText className="w-5 h-5" />
+            Buy Now - $97
+          </Button>
         </div>
       </div>
 
@@ -141,7 +143,7 @@ const ArtistEPK = () => {
         </div>
       </div>
 
-      {/* CTA Section */}
+      {/* Get Started Section */}
       <div className="py-16 px-4 text-center">
         <div className="max-w-2xl mx-auto">
           <h2 className="text-3xl font-bold mb-6">Ready to Build Your Professional EPK?</h2>
@@ -157,8 +159,35 @@ const ArtistEPK = () => {
             className="gap-2 px-8 py-6 text-lg"
           >
             <FileText className="w-5 h-5" />
-            View Our Packages
+            Get Started
           </Button>
+        </div>
+      </div>
+
+      {/* Buy Now Section */}
+      <div id="buy-now-section" className="py-16 px-4">
+        <div className="max-w-2xl mx-auto">
+          <div className="bg-gradient-to-br from-primary/5 to-secondary/5 border-2 border-primary/20 rounded-xl p-8 text-center">
+            <h2 className="text-3xl font-bold mb-6">Professional Artist EPK</h2>
+            <p className="text-lg text-muted-foreground mb-8">
+              Get the industry-standard press kit that opens doors and gets you noticed.
+            </p>
+            <div className="mb-8">
+              <div className="text-4xl font-bold text-primary mb-2">$97</div>
+              <p className="text-muted-foreground">Complete EPK design & optimization</p>
+            </div>
+            <Button 
+              onClick={() => {/* External link will be added later */}}
+              size="lg" 
+              className="gap-2 px-8 py-6 text-lg bg-gradient-to-r from-primary to-secondary hover:from-primary/90 hover:to-secondary/90"
+            >
+              <FileText className="w-5 h-5" />
+              Get Started - $97
+            </Button>
+            <p className="text-sm text-muted-foreground mt-4">
+              Build your professional press kit today
+            </p>
+          </div>
         </div>
       </div>
     </div>

@@ -55,16 +55,6 @@ const ArtistWebsite = () => {
         </Button>
       </div>
 
-      {/* Buy Button */}
-      <div className="absolute top-6 right-6 z-10">
-        <Button 
-          onClick={() => {/* External link will be added later */}}
-          className="gap-2 bg-white text-primary hover:bg-white/90"
-        >
-          <Globe className="w-4 h-4" />
-          Buy Now - $197
-        </Button>
-      </div>
 
       {/* Hero Section */}
       <div className="relative bg-gradient-to-br from-primary via-primary/80 to-secondary overflow-hidden">
@@ -82,9 +72,21 @@ const ArtistWebsite = () => {
           <div className="bg-white/20 border border-white/30 rounded-xl p-6 mb-8 max-w-md mx-auto">
             <p className="text-2xl font-bold text-white">🌐 Starting at: $197</p>
           </div>
-          <p className="text-lg opacity-90 max-w-4xl mx-auto leading-relaxed">
+          <p className="text-lg opacity-90 max-w-4xl mx-auto leading-relaxed mb-8">
             We build modern, professional websites designed specifically for music artists. Whether you're just starting out or leveling up your career, having your own website is one of the most powerful tools for growing your brand, building your fanbase, and generating revenue.
           </p>
+          <Button 
+            onClick={() => {
+              document.getElementById('buy-now-section')?.scrollIntoView({ 
+                behavior: 'smooth' 
+              });
+            }}
+            size="lg"
+            className="gap-2 bg-white text-primary hover:bg-white/90 px-8 py-6 text-lg"
+          >
+            <Globe className="w-5 h-5" />
+            Buy Now - $197
+          </Button>
         </div>
       </div>
 
@@ -125,7 +127,7 @@ const ArtistWebsite = () => {
         </div>
       </div>
 
-      {/* CTA Section */}
+      {/* Get Started Section */}
       <div className="py-16 px-4 text-center">
         <div className="max-w-2xl mx-auto">
           <h2 className="text-3xl font-bold mb-6">Ready to Build Your Digital Homebase?</h2>
@@ -141,8 +143,35 @@ const ArtistWebsite = () => {
             className="gap-2 px-8 py-6 text-lg"
           >
             <Globe className="w-5 h-5" />
-            View Our Packages
+            Get Started
           </Button>
+        </div>
+      </div>
+
+      {/* Buy Now Section */}
+      <div id="buy-now-section" className="py-16 px-4">
+        <div className="max-w-2xl mx-auto">
+          <div className="bg-gradient-to-br from-primary/5 to-secondary/5 border-2 border-primary/20 rounded-xl p-8 text-center">
+            <h2 className="text-3xl font-bold mb-6">Professional Artist Website</h2>
+            <p className="text-lg text-muted-foreground mb-8">
+              Your digital homebase that converts visitors into fans and grows your music career.
+            </p>
+            <div className="mb-8">
+              <div className="text-4xl font-bold text-primary mb-2">$197</div>
+              <p className="text-muted-foreground">Complete website build & optimization</p>
+            </div>
+            <Button 
+              onClick={() => {/* External link will be added later */}}
+              size="lg" 
+              className="gap-2 px-8 py-6 text-lg bg-gradient-to-r from-primary to-secondary hover:from-primary/90 hover:to-secondary/90"
+            >
+              <Globe className="w-5 h-5" />
+              Get Started - $197
+            </Button>
+            <p className="text-sm text-muted-foreground mt-4">
+              Build your professional online presence today
+            </p>
+          </div>
         </div>
       </div>
     </div>

@@ -30,16 +30,6 @@ const ShopifySetup = () => {
         </Button>
       </div>
 
-      {/* Buy Button */}
-      <div className="absolute top-6 right-6 z-10">
-        <Button 
-          onClick={() => {/* External link will be added later */}}
-          className="gap-2 bg-white text-primary hover:bg-white/90"
-        >
-          <ShoppingBag className="w-4 h-4" />
-          Buy Now - $750
-        </Button>
-      </div>
 
       {/* Hero Section */}
       <div className="relative bg-gradient-to-br from-primary via-primary/80 to-secondary overflow-hidden">
@@ -64,7 +54,7 @@ const ShopifySetup = () => {
               and connect everything so you're ready to start selling immediately.
             </p>
 
-            <div className="flex items-center justify-center gap-8 mb-12">
+            <div className="flex items-center justify-center gap-8 mb-8">
               <div className="text-center">
                 <div className="text-3xl font-bold text-white">$750</div>
                 <div className="text-sm text-white/70">One-Time Setup</div>
@@ -78,6 +68,18 @@ const ShopifySetup = () => {
                 <div className="text-sm text-white/70">Products Included</div>
               </div>
             </div>
+            <Button 
+              onClick={() => {
+                document.getElementById('buy-now-section')?.scrollIntoView({ 
+                  behavior: 'smooth' 
+                });
+              }}
+              size="lg"
+              className="gap-2 bg-white text-primary hover:bg-white/90 px-8 py-6 text-lg"
+            >
+              <ShoppingBag className="w-5 h-5" />
+              Buy Now - $750
+            </Button>
           </div>
         </div>
       </div>
@@ -280,17 +282,30 @@ const ShopifySetup = () => {
           </div>
         </div>
 
-        {/* CTA Section */}
-        <div className="text-center">
-          <div className="bg-primary/5 rounded-lg p-8 max-w-2xl mx-auto">
-            <h3 className="text-2xl font-bold mb-4">Ready to Launch Your Merch Store?</h3>
-            <p className="text-muted-foreground mb-6">
-              Get everything set up professionally and start selling your designs in days.
-            </p>
-            <Button size="lg" className="gap-2">
-              <ShoppingBag className="w-5 h-5" />
-              Get Started - $750
-            </Button>
+        {/* Buy Now Section */}
+        <div id="buy-now-section" className="py-16 px-4">
+          <div className="max-w-2xl mx-auto">
+            <div className="bg-gradient-to-br from-primary/5 to-secondary/5 border-2 border-primary/20 rounded-xl p-8 text-center">
+              <h2 className="text-3xl font-bold mb-6">Ready to Start Selling?</h2>
+              <p className="text-lg text-muted-foreground mb-8">
+                Let's build your professional merch store and start generating revenue from day one.
+              </p>
+              <div className="mb-8">
+                <div className="text-4xl font-bold text-primary mb-2">$750</div>
+                <p className="text-muted-foreground">Complete Shopify setup & optimization</p>
+              </div>
+              <Button 
+                onClick={() => {/* External link will be added later */}}
+                size="lg" 
+                className="gap-2 px-8 py-6 text-lg bg-gradient-to-r from-primary to-secondary hover:from-primary/90 hover:to-secondary/90"
+              >
+                <ShoppingBag className="w-5 h-5" />
+                Get Started - $750
+              </Button>
+              <p className="text-sm text-muted-foreground mt-4">
+                Start selling your merch professionally today
+              </p>
+            </div>
           </div>
         </div>
       </div>
