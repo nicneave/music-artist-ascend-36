@@ -53,14 +53,14 @@ const PricingSection = () => {
   const addOns = [
     { 
       name: "Shopify Setup", 
-      price: "Free Guide", 
+      price: "$750", 
       description: "Complete setup guide for your online store",
       icon: <ShoppingBag className="w-6 h-6 text-primary" />,
       route: "/shopify-setup"
     },
     { 
       name: "Newsletter Guide", 
-      price: "Free Guide", 
+      price: "$97", 
       description: "Build your fan funnel with email marketing",
       icon: <Mail className="w-6 h-6 text-primary" />,
       route: "/newsletter-guide"
