@@ -1,9 +1,12 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { CheckCircle, Mail, Users, TrendingUp, MessageSquare, Heart, DollarSign } from "lucide-react";
+import { CheckCircle, Mail, Users, TrendingUp, MessageSquare, Heart, DollarSign, ArrowLeft } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 
 const NewsletterGuide = () => {
+  const navigate = useNavigate();
+
   const handleGetStarted = () => {
     // Placeholder for checkout functionality
     console.log("Initiating newsletter setup checkout...");
@@ -11,6 +14,17 @@ const NewsletterGuide = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      {/* Back Button */}
+      <div className="max-w-4xl mx-auto px-6 pt-6">
+        <Button 
+          onClick={() => navigate("/")}
+          variant="ghost"
+          className="gap-2 mb-4"
+        >
+          <ArrowLeft className="w-4 h-4" />
+          Back to Home
+        </Button>
+      </div>
       {/* Hero Section */}
       <div className="relative bg-gradient-to-br from-primary via-primary/80 to-secondary overflow-hidden">
         <div className="absolute inset-0 bg-black/20"></div>
