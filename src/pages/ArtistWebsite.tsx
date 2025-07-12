@@ -55,6 +55,17 @@ const ArtistWebsite = () => {
         </Button>
       </div>
 
+      {/* Buy Button */}
+      <div className="absolute top-6 right-6 z-10">
+        <Button 
+          onClick={() => {/* External link will be added later */}}
+          className="gap-2 bg-white text-primary hover:bg-white/90"
+        >
+          <Globe className="w-4 h-4" />
+          Buy Now - $197
+        </Button>
+      </div>
+
       {/* Hero Section */}
       <div className="relative bg-gradient-to-br from-primary via-primary/80 to-secondary overflow-hidden">
         <div className="absolute inset-0 bg-black/20"></div>
