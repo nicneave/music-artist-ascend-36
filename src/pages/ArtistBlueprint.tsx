@@ -1,12 +1,14 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { CheckCircle, Target, Calendar, Music, ShoppingBag, DollarSign, Users, TrendingUp, Star, Play, MessageSquare } from "lucide-react";
+import { CheckCircle, Target, Calendar, Music, ShoppingBag, DollarSign, Users, TrendingUp, Star, Play, MessageSquare, Home } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 
 const ArtistBlueprint = () => {
+  const navigate = useNavigate();
+
   const handleGetStarted = () => {
-    // Placeholder for contact/booking functionality
-    console.log("Initiating blueprint consultation...");
+    navigate("/");
   };
 
   const monthlyGoals = [
@@ -42,6 +44,17 @@ const ArtistBlueprint = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      {/* Home Button */}
+      <div className="absolute top-6 left-6 z-10">
+        <Button 
+          onClick={() => navigate("/")}
+          variant="ghost"
+          className="gap-2 text-white hover:bg-white/20"
+        >
+          <Home className="w-4 h-4" />
+          Home
+        </Button>
+      </div>
       {/* Hero Section */}
       <div className="relative bg-gradient-to-br from-primary via-primary/80 to-secondary overflow-hidden">
         <div className="absolute inset-0 bg-black/20"></div>
@@ -388,10 +401,10 @@ const ArtistBlueprint = () => {
                 onClick={handleGetStarted}
                 className="text-lg px-8 py-6 h-auto bg-gradient-to-r from-primary to-secondary hover:from-primary/90 hover:to-secondary/90"
               >
-                Book a Free Blueprint Call
+                View Our Packages
               </Button>
               <p className="text-sm text-muted-foreground">
-                DM us "BLUEPRINT" on IG or visit our contact page
+                Start building your superfan community today
               </p>
             </div>
           </CardContent>

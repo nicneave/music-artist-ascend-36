@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { CheckCircle, Mail, Users, TrendingUp, MessageSquare, Heart, DollarSign, ArrowLeft } from "lucide-react";
+import { CheckCircle, Mail, Users, TrendingUp, MessageSquare, Heart, DollarSign, Home } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 
 const NewsletterGuide = () => {
@@ -14,15 +14,15 @@ const NewsletterGuide = () => {
 
   return (
     <div className="min-h-screen bg-background">
-      {/* Back Button */}
-      <div className="max-w-4xl mx-auto px-6 pt-6">
+      {/* Home Button */}
+      <div className="absolute top-6 left-6 z-10">
         <Button 
           onClick={() => navigate("/")}
           variant="ghost"
-          className="gap-2 mb-4"
+          className="gap-2 text-white hover:bg-white/20"
         >
-          <ArrowLeft className="w-4 h-4" />
-          Back to Home
+          <Home className="w-4 h-4" />
+          Home
         </Button>
       </div>
       {/* Hero Section */}
