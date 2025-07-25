@@ -31,80 +31,104 @@ const Index = () => {
               <TabsTrigger value="services">Services & Packages</TabsTrigger>
             </TabsList>
             
-            <TabsContent value="about" className="space-y-24">
+            <TabsContent value="about" className="space-y-32">
               {/* Problem Section */}
-              <section className="text-center max-w-4xl mx-auto">
-                <h2 className="text-3xl md:text-5xl font-bold mb-8">🚨 The Music Industry Changed</h2>
-                <p className="text-xl text-muted-foreground mb-6 leading-relaxed">
-                  Most artists are still using outdated strategies.
-                </p>
-                <p className="text-lg text-muted-foreground leading-relaxed">
-                  While labels focus on quick wins, independent artists need <span className="font-semibold text-foreground">real, sustainable growth</span>.
-                </p>
+              <section className="text-center max-w-4xl mx-auto space-y-12">
+                <h2 className="text-4xl md:text-6xl font-bold mb-12">🚨 The Music Industry Changed</h2>
+                
+                <div className="space-y-8">
+                  <p className="text-2xl text-muted-foreground font-medium">
+                    Most artists are still using outdated strategies
+                  </p>
+                  
+                  <div className="max-w-2xl mx-auto">
+                    <p className="text-xl text-muted-foreground leading-relaxed">
+                      While labels focus on quick wins, independent artists need <span className="font-bold text-foreground">real, sustainable growth</span>
+                    </p>
+                  </div>
+                </div>
               </section>
 
               {/* What We Do Section */}
-              <section className="bg-muted/30 py-16 px-8 rounded-2xl">
-                <div className="text-center max-w-4xl mx-auto">
-                  <h2 className="text-3xl md:text-4xl font-bold mb-8">🎯 Label Ready: Your One-Stop Shop for Music Success</h2>
-                  <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
-                    We help independent artists grow <span className="font-semibold text-foreground">real fanbases</span> and build <span className="font-semibold text-foreground">profitable careers</span>.
-                  </p>
-                  <p className="text-lg text-muted-foreground leading-relaxed">
-                    Everything you need to get <span className="font-bold text-primary">label ready</span> — without needing one.
-                  </p>
+              <section className="bg-muted/30 py-20 px-8 rounded-2xl">
+                <div className="text-center max-w-4xl mx-auto space-y-12">
+                  <h2 className="text-4xl md:text-5xl font-bold mb-12">🎯 Label Ready: Your One-Stop Shop</h2>
+                  
+                  <div className="space-y-10">
+                    <p className="text-xl text-muted-foreground leading-relaxed max-w-3xl mx-auto">
+                      We help independent artists grow <span className="font-bold text-foreground">real fanbases</span> and build <span className="font-bold text-foreground">profitable careers</span>
+                    </p>
+                    
+                    <div className="bg-primary/10 p-8 rounded-xl max-w-2xl mx-auto">
+                      <p className="text-lg text-muted-foreground leading-relaxed">
+                        Everything you need to get <span className="font-bold text-primary text-xl">label ready</span> — without needing one
+                      </p>
+                    </div>
+                  </div>
                 </div>
               </section>
 
               {/* Results Section */}
-              <section className="max-w-6xl mx-auto">
-                <div className="text-center mb-12">
-                  <h2 className="text-3xl md:text-4xl font-bold mb-4">📊 Real Results from Real Platforms</h2>
-                  <p className="text-lg text-muted-foreground">Here's what our artists achieve with our proven strategies</p>
+              <section className="max-w-6xl mx-auto space-y-16">
+                <div className="text-center space-y-8">
+                  <h2 className="text-4xl md:text-5xl font-bold">📊 Real Results from Real Platforms</h2>
+                  <p className="text-xl text-muted-foreground max-w-2xl mx-auto">Here's what our artists achieve with our proven strategies</p>
                 </div>
                 
-                <div className="grid md:grid-cols-3 gap-8">
-                  <div className="bg-card rounded-lg p-6 border hover:shadow-lg transition-shadow">
-                    <img src={spotifyAnalytics} alt="Spotify for Artists analytics dashboard showing growth" className="w-full h-48 object-cover rounded-lg mb-4" />
-                    <h3 className="text-xl font-semibold mb-2">🎵 1K → 47K Monthly Listeners</h3>
-                    <p className="text-muted-foreground">Spotify growth in 6 months</p>
+                <div className="grid md:grid-cols-3 gap-10">
+                  <div className="bg-card rounded-xl p-8 border hover:shadow-xl transition-all duration-300">
+                    <img src={spotifyAnalytics} alt="Spotify for Artists analytics dashboard showing growth" className="w-full h-48 object-cover rounded-lg mb-6" />
+                    <h3 className="text-2xl font-bold mb-3">🎵 1K → 47K Monthly Listeners</h3>
+                    <p className="text-muted-foreground text-lg">Spotify growth in 6 months</p>
                   </div>
                   
-                  <div className="bg-card rounded-lg p-6 border hover:shadow-lg transition-shadow">
-                    <img src={instagramAnalytics} alt="Instagram Insights showing follower growth analytics" className="w-full h-48 object-cover rounded-lg mb-4" />
-                    <h3 className="text-xl font-semibold mb-2">📱 2K → 78K Followers</h3>
-                    <p className="text-muted-foreground">Instagram organic growth</p>
+                  <div className="bg-card rounded-xl p-8 border hover:shadow-xl transition-all duration-300">
+                    <img src={instagramAnalytics} alt="Instagram Insights showing follower growth analytics" className="w-full h-48 object-cover rounded-lg mb-6" />
+                    <h3 className="text-2xl font-bold mb-3">📱 2K → 78K Followers</h3>
+                    <p className="text-muted-foreground text-lg">Instagram organic growth</p>
                   </div>
                   
-                  <div className="bg-card rounded-lg p-6 border hover:shadow-lg transition-shadow">
-                    <img src={youtubeAnalytics} alt="YouTube Studio analytics showing subscriber growth" className="w-full h-48 object-cover rounded-lg mb-4" />
-                    <h3 className="text-xl font-semibold mb-2">📺 834 → 28K Subscribers</h3>
-                    <p className="text-muted-foreground">YouTube channel growth</p>
+                  <div className="bg-card rounded-xl p-8 border hover:shadow-xl transition-all duration-300">
+                    <img src={youtubeAnalytics} alt="YouTube Studio analytics showing subscriber growth" className="w-full h-48 object-cover rounded-lg mb-6" />
+                    <h3 className="text-2xl font-bold mb-3">📺 834 → 28K Subscribers</h3>
+                    <p className="text-muted-foreground text-lg">YouTube channel growth</p>
                   </div>
                 </div>
               </section>
 
               {/* The Problem With Labels Section */}
-              <section className="max-w-4xl mx-auto text-center">
-                <h2 className="text-3xl md:text-4xl font-bold mb-8">🏷️ Labels Only Want You When You're Already Ready</h2>
-                <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
-                  Most artists wait for a label to <span className="font-semibold text-foreground">"discover"</span> them.
-                </p>
-                <p className="text-lg text-muted-foreground leading-relaxed">
-                  But labels only sign artists who already have the <span className="font-bold text-foreground">numbers, fanbase, and business structure</span>.
-                </p>
+              <section className="max-w-4xl mx-auto text-center space-y-12">
+                <h2 className="text-4xl md:text-5xl font-bold mb-12">🏷️ Labels Only Want You When You're Already Ready</h2>
+                
+                <div className="space-y-10">
+                  <p className="text-2xl text-muted-foreground font-medium">
+                    Most artists wait for a label to <span className="font-bold text-foreground">"discover"</span> them
+                  </p>
+                  
+                  <div className="bg-primary/10 p-8 rounded-xl max-w-3xl mx-auto">
+                    <p className="text-xl text-muted-foreground leading-relaxed">
+                      But labels only sign artists who already have the <span className="font-bold text-foreground">numbers, fanbase, and business structure</span>
+                    </p>
+                  </div>
+                </div>
               </section>
 
               {/* Our Approach Section */}
-              <section className="bg-muted/30 py-16 px-8 rounded-2xl">
-                <div className="text-center max-w-4xl mx-auto">
-                  <h2 className="text-3xl md:text-4xl font-bold mb-8">🔥 We Get You Label Ready Before You Need a Label</h2>
-                  <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
-                    Structure your career as a <span className="font-semibold text-foreground">business from day one</span>.
-                  </p>
-                  <p className="text-lg text-muted-foreground leading-relaxed">
-                    Build the foundation that makes <span className="font-bold text-foreground">labels want to work with you</span>.
-                  </p>
+              <section className="bg-muted/30 py-20 px-8 rounded-2xl">
+                <div className="text-center max-w-4xl mx-auto space-y-12">
+                  <h2 className="text-4xl md:text-5xl font-bold mb-12">🔥 We Get You Label Ready Before You Need a Label</h2>
+                  
+                  <div className="space-y-10">
+                    <p className="text-xl text-muted-foreground leading-relaxed max-w-3xl mx-auto">
+                      Structure your career as a <span className="font-bold text-foreground">business from day one</span>
+                    </p>
+                    
+                    <div className="bg-primary/10 p-8 rounded-xl max-w-2xl mx-auto">
+                      <p className="text-lg text-muted-foreground leading-relaxed">
+                        Build the foundation that makes <span className="font-bold text-primary text-xl">labels want to work with you</span>
+                      </p>
+                    </div>
+                  </div>
                 </div>
               </section>
 
