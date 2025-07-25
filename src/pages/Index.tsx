@@ -34,32 +34,38 @@ const Index = () => {
             <TabsContent value="about" className="space-y-24">
               {/* Problem Section */}
               <section className="text-center max-w-4xl mx-auto">
-                <h2 className="text-3xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-destructive to-orange-500 bg-clip-text text-transparent">
-                  🚨 The Music Industry Changed.
+                <h2 className="text-3xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-primary to-primary/80 bg-clip-text text-transparent">
+                  🚨 The Music Industry Changed
                 </h2>
-                <div className="space-y-4">
-                  <p className="text-xl text-muted-foreground mb-4 font-medium">
-                    📉 Most artists are still using <span className="line-through text-destructive/60">outdated strategies</span>
+                <div className="space-y-6">
+                  <p className="text-xl text-muted-foreground font-medium">
+                    Most artists are still using <span className="line-through text-muted-foreground/60">outdated strategies</span>
                   </p>
-                  <p className="text-lg text-muted-foreground bg-muted/30 p-4 rounded-lg border-l-4 border-orange-500">
-                    💡 While labels focus on quick wins, independent artists need <span className="font-semibold text-foreground">real, sustainable growth</span>
-                  </p>
+                  <div className="bg-muted/50 p-6 rounded-lg border-l-4 border-primary">
+                    <p className="text-lg text-muted-foreground">
+                      While labels focus on quick wins, independent artists need <span className="font-semibold text-foreground">real, sustainable growth</span>
+                    </p>
+                  </div>
                 </div>
               </section>
 
               {/* What We Do Section */}
-              <section className="bg-gradient-to-br from-primary/10 via-secondary/5 to-accent/10 py-16 px-8 rounded-2xl border border-primary/20">
+              <section className="bg-muted/50 py-16 px-8 rounded-2xl border">
                 <div className="text-center max-w-4xl mx-auto">
-                  <h2 className="text-3xl md:text-4xl font-bold mb-6 bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
+                  <h2 className="text-3xl md:text-4xl font-bold mb-6">
                     🎯 Label Ready: Your One-Stop Shop for Music Success
                   </h2>
-                  <div className="space-y-4">
-                    <p className="text-lg text-muted-foreground mb-4 bg-background/50 p-3 rounded-lg border-l-4 border-primary">
-                      💪 We help independent artists grow <span className="font-semibold text-foreground">real fanbases</span> and build <span className="font-semibold text-foreground">profitable careers</span>
-                    </p>
-                    <p className="text-lg text-muted-foreground bg-background/50 p-3 rounded-lg border-l-4 border-secondary">
-                      🚀 Everything you need to get <span className="font-bold text-primary">label ready</span> — without needing one
-                    </p>
+                  <div className="space-y-6">
+                    <div className="bg-background p-6 rounded-lg border-l-4 border-primary">
+                      <p className="text-lg text-muted-foreground">
+                        We help independent artists grow <span className="font-semibold text-foreground">real fanbases</span> and build <span className="font-semibold text-foreground">profitable careers</span>
+                      </p>
+                    </div>
+                    <div className="bg-background p-6 rounded-lg border-l-4 border-secondary">
+                      <p className="text-lg text-muted-foreground">
+                        Everything you need to get <span className="font-bold text-primary">label ready</span> — without needing one
+                      </p>
+                    </div>
                   </div>
                 </div>
               </section>
@@ -67,63 +73,75 @@ const Index = () => {
               {/* Results Section */}
               <section className="max-w-6xl mx-auto">
                 <div className="text-center mb-12">
-                  <h2 className="text-3xl md:text-4xl font-bold mb-4 bg-gradient-to-r from-green-500 to-blue-500 bg-clip-text text-transparent">
+                  <h2 className="text-3xl md:text-4xl font-bold mb-4">
                     📊 Real Results from Real Platforms
                   </h2>
-                  <p className="text-lg text-muted-foreground bg-muted/20 p-3 rounded-lg border-l-4 border-green-500">
-                    💯 Here's what our artists achieve with our <span className="font-semibold text-foreground">proven strategies</span>
-                  </p>
+                  <div className="bg-muted/50 p-6 rounded-lg border-l-4 border-primary">
+                    <p className="text-lg text-muted-foreground">
+                      Here's what our artists achieve with our <span className="font-semibold text-foreground">proven strategies</span>
+                    </p>
+                  </div>
                 </div>
                 
                 <div className="grid md:grid-cols-3 gap-8">
-                  <div className="bg-card rounded-lg p-6 border shadow-lg hover:shadow-xl transition-shadow border-green-500/20">
+                  <div className="bg-card rounded-lg p-6 border hover:shadow-lg transition-shadow">
                     <img src={spotifyAnalytics} alt="Spotify for Artists analytics dashboard showing growth" className="w-full h-48 object-cover rounded-lg mb-4" />
-                    <h3 className="text-xl font-semibold mb-2 text-green-600">🎵 1K → 47K Monthly Listeners</h3>
-                    <p className="text-muted-foreground font-medium">Spotify growth in 6 months</p>
+                    <h3 className="text-xl font-semibold mb-2">🎵 1K → 47K Monthly Listeners</h3>
+                    <p className="text-muted-foreground">Spotify growth in 6 months</p>
                   </div>
                   
-                  <div className="bg-card rounded-lg p-6 border shadow-lg hover:shadow-xl transition-shadow border-purple-500/20">
+                  <div className="bg-card rounded-lg p-6 border hover:shadow-lg transition-shadow">
                     <img src={instagramAnalytics} alt="Instagram Insights showing follower growth analytics" className="w-full h-48 object-cover rounded-lg mb-4" />
-                    <h3 className="text-xl font-semibold mb-2 text-purple-600">📱 2K → 78K Followers</h3>
-                    <p className="text-muted-foreground font-medium">Instagram organic growth</p>
+                    <h3 className="text-xl font-semibold mb-2">📱 2K → 78K Followers</h3>
+                    <p className="text-muted-foreground">Instagram organic growth</p>
                   </div>
                   
-                  <div className="bg-card rounded-lg p-6 border shadow-lg hover:shadow-xl transition-shadow border-red-500/20">
+                  <div className="bg-card rounded-lg p-6 border hover:shadow-lg transition-shadow">
                     <img src={youtubeAnalytics} alt="YouTube Studio analytics showing subscriber growth" className="w-full h-48 object-cover rounded-lg mb-4" />
-                    <h3 className="text-xl font-semibold mb-2 text-red-600">📺 834 → 28K Subscribers</h3>
-                    <p className="text-muted-foreground font-medium">YouTube channel growth</p>
+                    <h3 className="text-xl font-semibold mb-2">📺 834 → 28K Subscribers</h3>
+                    <p className="text-muted-foreground">YouTube channel growth</p>
                   </div>
                 </div>
               </section>
 
               {/* The Problem With Labels Section */}
-              <section className="max-w-4xl mx-auto text-center bg-muted/20 p-8 rounded-2xl border-l-4 border-destructive">
-                <h2 className="text-3xl md:text-4xl font-bold mb-6 bg-gradient-to-r from-destructive to-orange-600 bg-clip-text text-transparent">
-                  🏷️ Labels Only Want You When You're Already Ready
-                </h2>
-                <div className="space-y-4">
-                  <p className="text-lg text-muted-foreground mb-4 bg-background/50 p-3 rounded-lg">
-                    ⏳ Most artists wait for a label to <span className="font-semibold text-foreground">"discover"</span> them
-                  </p>
-                  <p className="text-lg text-muted-foreground bg-background/50 p-3 rounded-lg border-l-4 border-destructive">
-                    💼 But labels only sign artists who already have the <span className="font-bold text-foreground">numbers, fanbase, and business structure</span>
-                  </p>
+              <section className="max-w-4xl mx-auto text-center">
+                <div className="bg-muted/50 p-8 rounded-2xl border-l-4 border-primary">
+                  <h2 className="text-3xl md:text-4xl font-bold mb-6">
+                    🏷️ Labels Only Want You When You're Already Ready
+                  </h2>
+                  <div className="space-y-6">
+                    <div className="bg-background p-6 rounded-lg border">
+                      <p className="text-lg text-muted-foreground">
+                        Most artists wait for a label to <span className="font-semibold text-foreground">"discover"</span> them
+                      </p>
+                    </div>
+                    <div className="bg-background p-6 rounded-lg border-l-4 border-primary">
+                      <p className="text-lg text-muted-foreground">
+                        But labels only sign artists who already have the <span className="font-bold text-foreground">numbers, fanbase, and business structure</span>
+                      </p>
+                    </div>
+                  </div>
                 </div>
               </section>
 
               {/* Our Approach Section */}
-              <section className="bg-gradient-to-br from-primary/10 via-green-500/5 to-blue-500/10 py-16 px-8 rounded-2xl border border-primary/30">
+              <section className="bg-muted/50 py-16 px-8 rounded-2xl border">
                 <div className="text-center max-w-4xl mx-auto">
-                  <h2 className="text-3xl md:text-4xl font-bold mb-6 bg-gradient-to-r from-primary to-green-600 bg-clip-text text-transparent">
+                  <h2 className="text-3xl md:text-4xl font-bold mb-6">
                     🔥 We Get You Label Ready Before You Need a Label
                   </h2>
-                  <div className="space-y-4">
-                    <p className="text-lg text-muted-foreground mb-4 bg-background/50 p-3 rounded-lg border-l-4 border-primary">
-                      🏗️ Structure your career as a <span className="font-semibold text-foreground">business from day one</span>
-                    </p>
-                    <p className="text-lg text-muted-foreground bg-background/50 p-3 rounded-lg border-l-4 border-green-500">
-                      💎 Build the foundation that makes <span className="font-bold text-foreground">labels want to work with you</span>
-                    </p>
+                  <div className="space-y-6">
+                    <div className="bg-background p-6 rounded-lg border-l-4 border-primary">
+                      <p className="text-lg text-muted-foreground">
+                        Structure your career as a <span className="font-semibold text-foreground">business from day one</span>
+                      </p>
+                    </div>
+                    <div className="bg-background p-6 rounded-lg border-l-4 border-secondary">
+                      <p className="text-lg text-muted-foreground">
+                        Build the foundation that makes <span className="font-bold text-foreground">labels want to work with you</span>
+                      </p>
+                    </div>
                   </div>
                 </div>
               </section>
